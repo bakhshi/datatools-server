@@ -1,4 +1,4 @@
-FROM maven:3.8.1-openjdk-8
+FROM maven:3.8.4-openjdk-8
 
 COPY ./src /datatools-server/src
 COPY ./.git /datatools-server/.git
