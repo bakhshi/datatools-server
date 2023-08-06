@@ -18,7 +18,7 @@ jobs:
             docker buildx build --platform linux/amd64,linux/arm64 \
               --file Dockerfile \
               --tag $DOCKERHUB_USERNAME/datatools-server:${TAG_NAME} \
-              $(if [ "$CIRCLE_BRANCH" = "master" ]; then echo '--push'; fi) .
+              $(if [ "$CIRCLE_BRANCH" = "dev" ]; then echo '--push'; fi) .
 
 workflows:
   my-workflow:
